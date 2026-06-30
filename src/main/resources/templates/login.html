@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legacy Capital Login</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#081B3A,#0E2452,#102D6A);
+}
+
+.login-box{
+width:380px;
+background:#122A59;
+border:2px solid #2F80ED;
+border-radius:20px;
+padding:35px;
+box-shadow:0 0 30px rgba(47,128,237,.35);
+text-align:center;
+}
+
+.logo{
+font-size:60px;
+color:#2F80ED;
+margin-bottom:15px;
+}
+
+h2{
+color:#fff;
+margin-bottom:5px;
+}
+
+p{
+color:#bfc9da;
+margin-bottom:25px;
+}
+
+.input-box{
+margin-bottom:18px;
+}
+
+.input-box input{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#0B1E45;
+color:#fff;
+font-size:15px;
+}
+
+.input-box input:focus{
+outline:none;
+border:2px solid #2F80ED;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#2F80ED;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#1B64D8;
+}
+
+.footer{
+margin-top:20px;
+color:#bfc9da;
+font-size:13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<div class="logo">
+<i class="fa-solid fa-chart-line"></i>
+</div>
+
+<h2>LEGACY CAPITAL</h2>
+
+<p>Business Management System</p>
+
+<form action="/login" method="post">
+
+<div class="input-box">
+<input
+type="text"
+name="username"
+placeholder="Username"
+required>
+</div>
+
+<div class="input-box">
+<input
+type="password"
+name="password"
+placeholder="Password"
+required>
+</div>
+
+<button type="submit">
+LOGIN
+</button>
+
+</form>
+
+<div class="footer">
+Legacy Capital © 2026
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BUSINESS DASHBOARD</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:#000;
+            color:gold;
+        }
+
+        .topbar{
+            background:#111;
+            padding:15px;
+            display:flex;
+            align-items:center;
+            border-bottom:2px solid gold;
+        }
+
+        .menu-btn{
+            font-size:28px;
+            cursor:pointer;
+            margin-right:15px;
+        }
+
+        .sidebar{
+            position:fixed;
+            top:0;
+            left:0;
+            width:0;
+            height:100%;
+            background:#111;
+            overflow-x:hidden;
+            transition:0.3s;
+            padding-top:60px;
+            border-right:2px solid gold;
+            z-index:999;
+        }
+
+        .sidebar a{
+            display:block;
+            padding:12px 20px;
+            color:gold;
+            text-decoration:none;
+            font-size:14px;
+        }
+
+        .sidebar a:hover{
+            background:gold;
+            color:black;
+        }
+
+        .main{
+            padding:20px;
+        }
+
+        .section-title{
+            font-size:20px;
+            margin:15px 0;
+            color:gold;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:15px;
+        }
+
+        .card{
+            background:#111;
+            border:2px solid gold;
+            border-radius:15px;
+            padding:20px;
+        }
+
+        .value{
+            font-size:30px;
+            font-weight:bold;
+        }
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:10px;
+            margin-top:20px;
+        }
+
+        .stat-box{
+            background:#111;
+            border:1px solid gold;
+            padding:15px;
+            text-align:center;
+            border-radius:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+
+    <h2>
+        💎 BUSINESS DASHBOARD -
+        <span th:text="${userName}">Demo User</span>
+    </h2>
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <a th:href="@{/overview}">🏠 Over View</a>
+    <a th:href="@{/subscription-pay}">💳 Subscription Pay</a>
+    <a th:href="@{/buy-pack}">📦 Buy Pack Matrix</a>
+    <a th:href="@{/matrix-view}">💎 Matrix View</a>
+    <a th:href="@{/tree}">🌳 Binary Tree</a>
+    <a th:href="@{/leadership-rank}">🏆 Leadership Rank</a>
+    <a th:href="@{/payment}">💰 Payment</a>
+    <a th:href="@{/report}">📊 Report</a>
+    <a th:href="@{/trade}">📊 Trade</a>
+
+    <a th:href="@{/logout}">🚪 Logout</a>
+
+    <a href="javascript:void(0)" onclick="closeMenu()">❌ Close</a>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="section-title">💰 WALLET OVERVIEW</div>
+
+    <div class="grid">
+
+        <div class="card">
+            <div>Total Balance</div>
+            <div class="value">$<span th:text="${wallet.balance}">0</span></div>
+        </div>
+
+        <div class="card">
+            <div>ROI Income</div>
+            <div class="value">$<span th:text="${wallet.roiIncome}">0</span></div>
+        </div>
+
+        <div class="card">
+            <div>Matrix Income</div>
+            <div class="value">$<span th:text="${wallet.matrixIncome}">0</span></div>
+        </div>
+
+        <div class="card">
+            <div>Affiliate Income</div>
+            <div class="value">$<span th:text="${wallet.affiliateIncome}">0</span></div>
+        </div>
+
+    </div>
+
+    <div class="section-title">📊 LIVE SYSTEM STATS</div>
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <h4>🟢 ACTIVE USERS</h4>
+            <p th:text="${activeUsers}">0</p>
+        </div>
+
+        <div class="stat-box">
+            <h4>🌳 TREE NODES</h4>
+            <p th:text="${totalNodes}">0</p>
+        </div>
+
+        <div class="stat-box">
+            <h4>💰 DAILY ROI</h4>
+            <p th:text="${dailyRoi}">0</p>
+        </div>
+
+        <div class="stat-box">
+            <h4>📈 TODAY EARN</h4>
+            <p th:text="${todayEarn}">0</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function openMenu(){
+    document.getElementById("sidebar").style.width="260px";
+}
+function closeMenu(){
+    document.getElementById("sidebar").style.width="0";
+}
+</script>
+
+</body>
+</html>

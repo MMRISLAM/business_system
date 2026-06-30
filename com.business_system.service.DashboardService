@@ -1,0 +1,53 @@
+package com.business_system.service;
+
+import com.business_system.dto.DashboardDTO;
+import com.business_system.model.User;
+import com.business_system.model.Wallet;
+import com.business_system.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DashboardService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private WalletService walletService;
+
+    public DashboardDTO getDashboard(Long userId) {
+
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        Wallet wallet = walletService.getOrCreateWallet(userId);
+
+        DashboardDTO dto = new DashboardDTO();
+
+        // USER
+        dto.setUsername(user.getUsername());
+        dto.setEmail(user.getEmail());
+        dto.setCountry(user.getCountry());
+        dto.setProfilePic(user.getProfilePic());
+        dto.setRank(user.getRank());
+
+        // WALLET
+        dto.setWalletBalance(wallet.getBalance());
+        dto.setCreditBalance(wallet.getCreditBalance());
+
+        // INCOME
+        dto.setReferIncome(wallet.getReferIncome());
+        dto.setAffiliateIncome(wallet.getAffiliateIncome());
+        dto.setDailyPoolIncome(wallet.getDailyPoolIncome());
+        dto.setSubscriptionRoiIncome(wallet.getSubscriptionRoiIncome());
+        dto.setSubscriptionRankIncome(wallet.getSubscriptionRankIncome());
+        dto.setBinaryIncome(wallet.getMatrixBinaryIncome());
+        dto.setRoyaltyIncome(wallet.getMatrixLevelRoyaltyIncome());
+
+        dto.setTotalIncome(wallet.getTotalIncome());
+        dto.setTotalWithdraw(wallet.getTotalWithdraw());
+
+        return dto;
+    }
+}

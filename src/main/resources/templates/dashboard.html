@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Business Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #0b1220, #111827);
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: gold;
+            padding: 20px 0;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255,215,0,0.15);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px gold;
+        }
+
+        .title {
+            color: gold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .value {
+            font-size: 22px;
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>💰 BUSINESS DASHBOARD</h1>
+
+<div class="container">
+
+    <div class="card">
+        <div class="title">Balance</div>
+        <div class="value" th:text="${wallet.balance != null ? wallet.balance : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Credit Balance</div>
+        <div class="value" th:text="${wallet.creditBalance != null ? wallet.creditBalance : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Deposit</div>
+        <div class="value" th:text="${wallet.deposit != null ? wallet.deposit : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Withdraw</div>
+        <div class="value" th:text="${wallet.withdraw != null ? wallet.withdraw : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Refer Income</div>
+        <div class="value" th:text="${wallet.referIncome != null ? wallet.referIncome : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Affiliate Income</div>
+        <div class="value" th:text="${wallet.affiliateIncome != null ? wallet.affiliateIncome : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Matrix Income</div>
+        <div class="value" th:text="${wallet.matrixIncome != null ? wallet.matrixIncome : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Binary Income</div>
+        <div class="value" th:text="${wallet.matrixBinaryIncome != null ? wallet.matrixBinaryIncome : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">ROI Income</div>
+        <div class="value" th:text="${wallet.roiIncome != null ? wallet.roiIncome : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Subscription ROI</div>
+        <div class="value" th:text="${wallet.subscriptionRoiIncome != null ? wallet.subscriptionRoiIncome : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Total Income</div>
+        <div class="value" th:text="${wallet.totalIncome != null ? wallet.totalIncome : 0}"></div>
+    </div>
+
+    <div class="card">
+        <div class="title">Total Withdraw</div>
+        <div class="value" th:text="${wallet.totalWithdraw != null ? wallet.totalWithdraw : 0}"></div>
+    </div>
+
+</div>
+
+<div class="footer">
+    © Business System Dashboard
+</div>
+
+</body>
+</html>

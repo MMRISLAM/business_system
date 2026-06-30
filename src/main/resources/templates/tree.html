@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3D Binary Tree</title>
+
+<style>
+body {
+    background: black;
+    color: gold;
+    font-family: Arial;
+    text-align: center;
+}
+
+.tree {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.node {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #111, #333);
+    box-shadow: 0 0 20px gold;
+    transform: rotateY(20deg);
+    transition: 0.5s;
+    animation: float 3s infinite ease-in-out;
+}
+
+.node:hover {
+    transform: scale(1.2) rotateY(0deg);
+    box-shadow: 0 0 40px gold;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.title {
+    font-size: 24px;
+    margin: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 class="title">🌳 LIVE 3D BINARY MATRIX TREE</h1>
+
+<div class="tree" id="tree"></div>
+
+<script>
+async function loadTree() {
+    let res = await fetch("/api/tree/all/1");
+    let data = await res.json();
+
+    let html = "";
+    data.forEach(u => {
+        html += `
+        <div class="node">
+            <h3>ID ${u.userId}</h3>
+            <p>${u.position}</p>
+            <p>${u.status}</p>
+        </div>
+        `;
+    });
+
+    document.getElementById("tree").innerHTML = html;
+}
+
+loadTree();
+setInterval(loadTree, 3000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+nohup: ignoring input
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-06-30T07:22:12.957+02:00  INFO 3154421 --- [           main] c.b.BusinessSystemApplication            : Starting BusinessSystemApplication v0.0.1-SNAPSHOT using Java 17.0.19 with PID 3154421 (/root/backend/business_system/target/business_system-0.0.1-SNAPSHOT.jar started by root in /root/backend/business_system)
+2026-06-30T07:22:13.104+02:00  INFO 3154421 --- [           main] c.b.BusinessSystemApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-06-30T07:22:17.968+02:00  INFO 3154421 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30T07:22:18.267+02:00  INFO 3154421 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 275 ms. Found 4 JPA repository interfaces.
+2026-06-30T07:22:21.341+02:00  INFO 3154421 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8086 (http)
+2026-06-30T07:22:21.418+02:00  INFO 3154421 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-30T07:22:21.419+02:00  INFO 3154421 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-30T07:22:21.519+02:00  INFO 3154421 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-30T07:22:21.522+02:00  INFO 3154421 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7951 ms
+2026-06-30T07:22:22.136+02:00  INFO 3154421 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30T07:22:22.396+02:00  INFO 3154421 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-30T07:22:22.473+02:00  INFO 3154421 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-30T07:22:23.385+02:00  INFO 3154421 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30T07:22:23.463+02:00  INFO 3154421 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-30T07:22:24.333+02:00  INFO 3154421 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d108406
+2026-06-30T07:22:24.345+02:00  INFO 3154421 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-30T07:22:24.512+02:00  WARN 3154421 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-30T07:22:27.145+02:00  INFO 3154421 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30T07:22:27.279+02:00  INFO 3154421 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30T07:22:29.043+02:00  INFO 3154421 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-06-30T07:22:30.050+02:00  INFO 3154421 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22fe90df, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2604940, org.springframework.security.web.context.SecurityContextHolderFilter@49482761, org.springframework.security.web.header.HeaderWriterFilter@532e00bd, org.springframework.web.filter.CorsFilter@2e564c78, org.springframework.security.web.authentication.logout.LogoutFilter@54cce500, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@22a1d77b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@744199bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ce8bf64, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@470866d1, org.springframework.security.web.access.ExceptionTranslationFilter@49e92724, org.springframework.security.web.access.intercept.AuthorizationFilter@3fe3ebb3]
+2026-06-30T07:22:32.194+02:00  INFO 3154421 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8086 (http) with context path ''
+2026-06-30T07:22:32.286+02:00  INFO 3154421 --- [           main] c.b.BusinessSystemApplication            : Started BusinessSystemApplication in 22.671 seconds (process running for 25.15)
+2026-06-30T07:22:33.512+02:00  INFO 3154421 --- [0.0-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-30T07:22:33.512+02:00  INFO 3154421 --- [0.0-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-30T07:22:33.514+02:00  INFO 3154421 --- [0.0-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.active,
+        u1_0.country,
+        u1_0.email,
+        u1_0.join_date,
+        u1_0.parent_id,
+        u1_0.password,
+        u1_0.position,
+        u1_0.profile_pic,
+        u1_0.referral_code,
+        u1_0.role,
+        u1_0.sponsor_id,
+        u1_0.subscription_amount,
+        u1_0.user_rank,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        w1_0.id,
+        w1_0.affiliate_income,
+        w1_0.balance,
+        w1_0.credit_balance,
+        w1_0.deposit,
+        w1_0.global_share,
+        w1_0.level1income,
+        w1_0.level2income,
+        w1_0.level3income,
+        w1_0.level4income,
+        w1_0.level5income,
+        w1_0.matching_income,
+        w1_0.matrix_binary_income,
+        w1_0.matrix_income,
+        w1_0.pool_income,
+        w1_0.rank_reward,
+        w1_0.roi_income,
+        w1_0.royalty_income,
+        w1_0.sponsor_bonus,
+        w1_0.subscription_income,
+        w1_0.total_income,
+        w1_0.total_withdraw,
+        w1_0.user_id,
+        w1_0.withdraw 
+    from
+        wallets w1_0 
+    where
+        w1_0.user_id=?

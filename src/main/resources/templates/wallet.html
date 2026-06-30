@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BUSINESS SYSTEM WALLET</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:#000;
+            color:gold;
+        }
+
+        .topbar{
+            background:#111;
+            padding:15px;
+            display:flex;
+            align-items:center;
+            border-bottom:2px solid gold;
+        }
+
+        .menu-btn{
+            font-size:30px;
+            cursor:pointer;
+            margin-right:20px;
+        }
+
+        .sidemenu{
+            height:100%;
+            width:0;
+            position:fixed;
+            top:0;
+            left:0;
+            background:#111;
+            overflow-x:hidden;
+            transition:0.3s;
+            padding-top:60px;
+            border-right:2px solid gold;
+            z-index:999;
+        }
+
+        .sidemenu a{
+            padding:12px 20px;
+            display:block;
+            text-decoration:none;
+            color:gold;
+            font-size:16px;
+        }
+
+        .sidemenu a:hover{
+            background:gold;
+            color:black;
+        }
+
+        .dashboard{
+            padding:20px;
+        }
+
+        .card{
+            background:#111;
+            border:2px solid gold;
+            border-radius:15px;
+            padding:20px;
+            margin-bottom:20px;
+            box-shadow:0 0 15px gold;
+        }
+
+        .balance{
+            font-size:35px;
+            margin-top:10px;
+        }
+
+        .btn{
+            background:gold;
+            color:black;
+            padding:12px 20px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+            font-weight:bold;
+            margin:5px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        table th, table td{
+            border:1px solid gold;
+            padding:10px;
+            text-align:center;
+        }
+
+        table th{
+            background:#111;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <h2>💰 BUSINESS SYSTEM WALLET</h2>
+</div>
+
+<!-- SIDEBAR -->
+<div id="side" class="sidemenu">
+
+    <a th:href="@{/overview}">📊 Overview</a>
+    <a th:href="@{/subscription-pay}">💳 Subscription Pay</a>
+    <a th:href="@{/buy-pack}">🛒 Buy Pack Matrix</a>
+    <a th:href="@{/matrix-view}">🌐 Matrix View</a>
+    <a th:href="@{/tree}">🌳 Binary Tree</a>
+    <a th:href="@{/leadership-rank}">🏆 Leadership Rank</a>
+
+    <a th:href="@{/payment}">💰 Payment</a>
+
+    <div style="padding-left:20px;">
+        <a th:href="@{/deposit}">➕ Deposit</a>
+        <a th:href="@{/withdraw}">➖ Withdraw</a>
+        <a th:href="@{/transfer}">🔄 Transfer</a>
+    </div>
+
+    <a th:href="@{/report}">📑 Report</a>
+    <a th:href="@{/trade}">📈 Trade</a>
+    <a th:href="@{/setting}">⚙️ Setting</a>
+
+    <div style="padding-left:20px;">
+        <a th:href="@{/profile-update}">👤 Profile Update</a>
+        <a th:href="@{/security-update}">🔐 Security Update</a>
+    </div>
+
+    <a th:href="@{/logout}">🚪 Logout</a>
+
+    <hr style="border-color:gold;">
+    <a href="javascript:void(0)" onclick="closeMenu()">❌ Close</a>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+
+    <!-- WALLET -->
+    <div class="card">
+        <h2>💰 Wallet Balance</h2>
+
+        <!-- dynamic value from Spring -->
+        <div class="balance">$ <span th:text="${wallet.balance}">0</span></div>
+
+        <button class="btn">➕ Deposit</button>
+        <button class="btn">➖ Withdraw</button>
+        <button class="btn">🔄 Transfer</button>
+    </div>
+
+    <!-- BINARY INCOME -->
+    <div class="card">
+        <h2>🌳 Binary Income</h2>
+        <div class="balance">$ <span th:text="${wallet.matrixBinaryIncome}">0</span></div>
+    </div>
+
+    <!-- REPORT -->
+    <div class="card">
+        <h2>📑 Recent Transactions</h2>
+
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Deposit</td>
+                <td>$100</td>
+                <td>Success</td>
+            </tr>
+
+            <tr>
+                <td>Withdraw</td>
+                <td>$50</td>
+                <td>Pending</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<script>
+function openMenu(){
+    document.getElementById("side").style.width="260px";
+}
+
+function closeMenu(){
+    document.getElementById("side").style.width="0";
+}
+</script>
+
+</body>
+</html>1~y<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BUSINESS SYSTEM WALLET</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:#000;
+            color:gold;
+        }
+
+        .topbar{
+            background:#111;
+            padding:15px;
+            display:flex;
+            align-items:center;
+            border-bottom:2px solid gold;
+        }
+
+        .menu-btn{
+            font-size:30px;
+            cursor:pointer;
+            margin-right:20px;
+        }
+
+        .sidemenu{
+            height:100%;
+            width:0;
+            position:fixed;
+            top:0;
+            left:0;
+            background:#111;
+            overflow-x:hidden;
+            transition:0.3s;
+            padding-top:60px;
+            border-right:2px solid gold;
+            z-index:999;
+        }
+
+        .sidemenu a{
+            padding:12px 20px;
+            display:block;
+            text-decoration:none;
+            color:gold;
+            font-size:16px;
+        }
+
+        .sidemenu a:hover{
+            background:gold;
+            color:black;
+        }
+
+        .dashboard{
+            padding:20px;
+        }
+
+        .card{
+            background:#111;
+            border:2px solid gold;
+            border-radius:15px;
+            padding:20px;
+            margin-bottom:20px;
+            box-shadow:0 0 15px gold;
+        }
+
+        .balance{
+            font-size:35px;
+            margin-top:10px;
+        }
+
+        .btn{
+            background:gold;
+            color:black;
+            padding:12px 20px;
+            border:none;
+            border-radius:10px;
+            cursor:pointer;
+            font-weight:bold;
+            margin:5px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        table th, table td{
+            border:1px solid gold;
+            padding:10px;
+            text-align:center;
+        }
+
+        table th{
+            background:#111;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <h2>💰 BUSINESS SYSTEM WALLET</h2>
+</div>
+
+<!-- SIDEBAR -->
+<div id="side" class="sidemenu">
+
+    <a th:href="@{/overview}">📊 Overview</a>
+    <a th:href="@{/subscription-pay}">💳 Subscription Pay</a>
+    <a th:href="@{/buy-pack}">🛒 Buy Pack Matrix</a>
+    <a th:href="@{/matrix-view}">🌐 Matrix View</a>
+    <a th:href="@{/tree}">🌳 Binary Tree</a>
+    <a th:href="@{/leadership-rank}">🏆 Leadership Rank</a>
+
+    <a th:href="@{/payment}">💰 Payment</a>
+
+    <div style="padding-left:20px;">
+        <a th:href="@{/deposit}">➕ Deposit</a>
+        <a th:href="@{/withdraw}">➖ Withdraw</a>
+        <a th:href="@{/transfer}">🔄 Transfer</a>
+    </div>
+
+    <a th:href="@{/report}">📑 Report</a>
+    <a th:href="@{/trade}">📈 Trade</a>
+    <a th:href="@{/setting}">⚙️ Setting</a>
+
+    <div style="padding-left:20px;">
+        <a th:href="@{/profile-update}">👤 Profile Update</a>
+        <a th:href="@{/security-update}">🔐 Security Update</a>
+    </div>
+
+    <a th:href="@{/logout}">🚪 Logout</a>
+
+    <hr style="border-color:gold;">
+    <a href="javascript:void(0)" onclick="closeMenu()">❌ Close</a>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+
+    <!-- WALLET -->
+    <div class="card">
+        <h2>💰 Wallet Balance</h2>
+
+        <!-- dynamic value from Spring -->
+        <div class="balance">$ <span th:text="${wallet.balance}">0</span></div>
+
+        <button class="btn">➕ Deposit</button>
+        <button class="btn">➖ Withdraw</button>
+        <button class="btn">🔄 Transfer</button>
+    </div>
+
+    <!-- BINARY INCOME -->
+    <div class="card">
+        <h2>🌳 Binary Income</h2>
+        <div class="balance">$ <span th:text="${wallet.matrixBinaryIncome}">0</span></div>
+    </div>
+
+    <!-- REPORT -->
+    <div class="card">
+        <h2>📑 Recent Transactions</h2>
+
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Deposit</td>
+                <td>$100</td>
+                <td>Success</td>
+            </tr>
+
+            <tr>
+                <td>Withdraw</td>
+                <td>$50</td>
+                <td>Pending</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<script>
+function openMenu(){
+    document.getElementById("side").style.width="260px";
+}
+
+function closeMenu(){
+    document.getElementById("side").style.width="0";
+}
+</script>
+
+</body>
+</html>
